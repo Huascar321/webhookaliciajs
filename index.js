@@ -1,9 +1,14 @@
 "use strict";
 
+var PORT = process.env.PORT || 5000; //agregado 
 const express = require("express");
 const bodyParser = require("body-parser");
 
 const restService = express();
+
+server.listen(PORT, function(){
+  console.log('Chat server running');
+});
 
 restService.use(
   bodyParser.urlencoded({
